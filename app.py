@@ -7,20 +7,16 @@ playlists = db.playlists
 
 app = Flask(__name__)
 
-# playlists = [
-#     {'title': 'Cat Videos', 'description': 'Cats acting weird'},
-#     {'title': '80\'s Music', 'description': 'Don\'t stop believing!'},
-#     {'title': "Freddie Mercury's Outfits", 'description': 'Look at that hairy chest!'}
-# ]
-
-
 def playlists_index():
     """Show all playlists."""
     return render_template('playlists_index.html', playlists=playlists)
 
-    def index():
-        """Return homepage."""
-        return render_template('home.html', msg='Flask is Cool!!')
+
+
+@app.route('/')
+def playlists_index():
+    """Show all playlists."""
+    return render_template('playlists_index.html', playlists=playlists)
 
 
 if __name__ == '__main__':
