@@ -1,3 +1,4 @@
+<!-- templates/playlists_index.html -->
 {% extends 'base.html' %}
 
 {% block content %}
@@ -5,7 +6,7 @@
 
 <a href='/playlists/new'>New Playlist</a>
 
-{% for playlist in playlists %}
+{% for playlist in playlists.find({}) %}
     <h2><a href='/playlists/{{ playlist._id }}'>{{ playlist.title }}</a></h2>
     <small>{{ playlist.description }}</small>
 {% endfor %}
