@@ -3,8 +3,7 @@
 {% block content %}
 <div class='row'>
     <div class='col-sm-6 col-sm-offset-3'>
-        <form method='POST' action='/playlists/{{playlist._id}}'>
-            <input type='hidden' name='_method' value='PUT'/>
+        <form method='POST' action='/playlists'>
             {% include 'partials/playlists_form.html' %}
             <!-- BUTTON -->
             <div class='form-group'>
